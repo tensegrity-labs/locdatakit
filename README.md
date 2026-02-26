@@ -1,6 +1,6 @@
 # locdatakit
 
-A Python toolkit and cli for processing, analyzing, and reporting on location data.
+A Python toolkit and CLI for processing, analyzing, and reporting on location data.
 
 ⚠️ This is an early-stage `v0.0.1` release. Expect API and config changes in future versions.
 

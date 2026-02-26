@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "locdatakit"
 version = "0.0.1"
-description = "Process GPX location logs into trip-ish CSV reports."
+description = "A Python toolkit and CLI for processing, analyzing, and reporting on location data."
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
