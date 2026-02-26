@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "locdatakit"
+version = "0.0.1"
+description = "Process GPX location logs into trip-ish CSV reports."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Tensegrity Labs" }]
+dependencies = [
+  "click>=8.1",
+  "gpxpy",
+  "pint",
+  "geopy",
+  "scipy",
+  "pytz",
+  "PyYAML",
+]
+
+[project.optional-dependencies]
+here = [
+  "here-location-services",
+]
+dev = [
+  "build",
+  "pytest",
+]
+
+[project.scripts]
+locdatakit = "locdatakit.cli:cli"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["locdatakit*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

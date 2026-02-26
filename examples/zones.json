@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "zone",
+  "data": {
+    "items": [
+      {
+        "id": "home",
+        "name": "Home",
+        "latitude": 40.0000,
+        "longitude": -105.0000,
+        "radius": 150,
+        "icon": "mdi:home"
+      },
+      {
+        "id": "office",
+        "name": "Office",
+        "latitude": 40.0200,
+        "longitude": -105.0000,
+        "radius": 150,
+        "icon": "mdi:briefcase"
+      }
+    ]
+  }
+}

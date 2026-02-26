@@ -1,0 +1,13 @@
+places:
+  - id: home
+    name: Home
+    lat: 40.0000
+    lon: -105.0000
+    radius_m: 150
+    tags: [residential]
+  - id: office
+    name: Office
+    lat: 40.0200
+    lon: -105.0000
+    radius_m: 150
+    tags: [work, icon:mdi:briefcase]
