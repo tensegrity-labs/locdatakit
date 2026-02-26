@@ -9,6 +9,8 @@ from .gpxtools import GpxTools, resolve_gpx_paths
 from .places import load_places
 from .report import write_trip_report_csv
 
+# TODO: Improve CLI UX with Click-native styled/colorized output and cleaner help formatting.
+# Consider integrating Rich for terminal presentation while keeping Click command structure.
 
 def _map_units(units: str) -> str:
     return "imperial" if units == "miles" else "metric_km"

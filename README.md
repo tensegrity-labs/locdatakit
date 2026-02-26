@@ -2,7 +2,7 @@
 
 A Python toolkit and CLI for processing, analyzing, and reporting on location data.
 
-⚠️ This is an early-stage `v0.0.1` release. Expect API and config changes in future versions.
+⚠️ This is in early-stage development. Expect API and config changes in future versions.
 
 ## What It Does
 
@@ -73,7 +73,64 @@ If initialization fails, the CLI shows an error with setup docs:
 
 CI/tests do not require HERE credentials.
 
-## Known Limitations (v0.0.1)
+## Known Limitations
 
 - Trip segmentation heuristics are prototype-quality and may over/under-segment in some data sets.
 - CSV schema and CLI flags are expected to evolve in upcoming releases.
+
+## Contributing
+
+Set up a dev environment:
+
+```bash
+pip install -e .[dev]
+```
+
+Run tests:
+
+```bash
+pytest -q
+```
+
+Bump version with `bump-my-version`:
+
+```bash
+# patch: 0.0.1 -> 0.0.2
+bump-my-version bump patch
+
+# minor: 0.0.1 -> 0.1.0
+bump-my-version bump minor
+
+# major: 0.0.1 -> 1.0.0
+bump-my-version bump major
+```
+
+The bump command updates both `pyproject.toml` and `locdatakit/__init__.py`.
+
+General contribution guidelines:
+
+- Keep changes focused and scoped to a single concern when possible.
+- Add or update tests for behavior changes.
+- Keep CLI behavior backward compatible unless a breaking change is documented.
+- Avoid committing personal data (real GPX traces, real addresses, API keys, credential files).
+- Use synthetic/redacted data in examples, tests, and issue discussions.
+
+Before opening a PR:
+
+- Run tests locally: `pytest -q`
+- Run a build check: `python -m build`
+- Update docs/changelog when user-facing behavior changes
+
+## Filing Issues
+
+When filing an issue, include:
+
+- What you expected to happen
+- What happened instead (full error output if possible)
+- Exact command used
+- OS and Python version
+- `locdatakit` version (`locdatakit --version`)
+- Whether `--here` was enabled
+
+If relevant, include a minimal reproducible input (synthetic GPX/places file preferred).
+Do not share private location data, API keys, or credential files in issues.
